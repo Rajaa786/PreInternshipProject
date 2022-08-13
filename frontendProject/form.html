@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="" class="formContainer">
+        <div class="formElement">
+          <label for="source_select" class="inputLabel"
+            >Select your source :</label
+          >
+          <input
+            type="text"
+            id="source_select"
+            value="Google Cloud Storage"
+            title="Minimum length 5,&#10;No special characters,&#10;Cannot start with '-', '_', '+'"
+          />
+        </div>
+        <div class="formElement">
+          <label for="pipeline" class="inputLabel"
+            >Provide a name for pipeline:</label
+          >
+          <input
+            type="text"
+            id="pipeline"
+            placeholder="e.g., cust_shop_energy_gkateway001"
+            pattern="^[a-zA-Z0-9]{4,10}$"
+            title="Minimum length 5,&#10;No special characters,&#10;Cannot start with '-', '_', '+'"
+          />
+        </div>
+        <div class="formElement">
+          <label for="project_name" class="inputLabel"
+            >GCS project name :</label
+          >
+          <input
+            type="text"
+            id="project_name"
+            placeholder="project-id"
+            pattern="^[a-zA-Z0-9]{4,10}$"
+            title="Minimum length 5,&#10;No special characters,&#10;Cannot start with '-', '_', '+'"
+          />
+        </div>
+        <div class="formElement">
+          <label for="bucket_name" class="inputLabel">GCS bucket name :</label>
+          <input
+            type="text"
+            id="bucket_name"
+            placeholder="gs://your-bucket"
+            pattern="^[a-zA-Z0-9]{4,10}$"
+            title="Minimum length 5,&#10;No special characters,&#10;Cannot start with '-', '_', '+'"
+          />
+        </div>
+        <div class="formElement">
+          <label for="" class="inputLabel">Input Cloud Storage File(s) :</label>
+          <input
+            type="text"
+            placeholder="GCS location of your files"
+            pattern="^[a-zA-Z0-9]{4,10}$"
+            title="Minimum length 5,&#10;No special characters,&#10;Cannot start with '-', '_', '+'"
+          />
+        </div>
+        <div class="formElement">
+          <label for="credentials" class="inputLabel">GCS credentials :</label>
+          <input
+            type="text"
+            id="credentials"
+            pattern="^[a-zA-Z0-9]{4,10}$"
+            title="Minimum length 5,&#10;No special characters,&#10;Cannot start with '-', '_', '+'"
+          />
+        </div>
+        <div class="formElement">
+          <label for="repeat_run" class="inputLabel">Run Every :</label>
+          <input type="number" id="repeat_run" placeholder="(in minutes)" />
+        </div>
+        <div class="buttonContainer">
+          <button id="submitButton" type="submit">Create</button>
+          <button>Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

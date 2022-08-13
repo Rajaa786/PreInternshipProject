@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Project</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <table border="1" class="tableContainer">
+        <thead class="tableHead">
+          <tr>
+            <th rowspan="2" colspan="3">Machine Name</th>
+            <th rowspan="2" colspan="2">Machine Id</th>
+            <th rowspan="1" colspan="3">Energy Consumed(kWH)</th>
+            <th rowspan="2" colspan="2">Active Power(MW)</th>
+            <th rowspan="2" colspan="2">Apparent Power(MVA)</th>
+            <th rowspan="2" colspan="2">Reactive Power(MVAr)</th>
+            <th rowspan="2" colspan="2">Current(Amps)</th>
+            <th rowspan="2" colspan="2">Voltage(Volts)</th>
+            <th rowspan="2" colspan="2">Power Factor</th>
+            <th rowspan="1" colspan="3">Idle Time</th>
+          </tr>
+          <tr>
+            <th>Today</th>
+            <th>MTD</th>
+            <th>YTD</th>
+            <th>Today</th>
+            <th>MTD</th>
+            <th>YTD</th>
+          </tr>
+        </thead>
+
+        <tbody id="tableBody">
+          <tr>
+            <td colspan="3">Example Machine</td>
+            <td colspan="2">001</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td colspan="2">0</td>
+            <td colspan="2">0</td>
+            <td colspan="2">0</td>
+            <td colspan="2">0</td>
+            <td colspan="2">0</td>
+            <td colspan="2">0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

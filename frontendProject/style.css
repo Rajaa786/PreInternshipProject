@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer {
+  --padding_inline: 0.15rem;
+  --padding_block: 0.5rem;
+  /* background-color: lightblue; */
+  --label_width: 40%;
+  --submit_button_width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  width: 40%;
+  font-size: 0.9rem;
+  border: 1px solid black;
+}
+
+.formElement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.formElement > label {
+  width: max-content;
+  text-align: right;
+  flex-basis: var(--label_width);
+  flex-grow: 1;
+  border-right: 1px solid black;
+  padding: var(--padding_block) var(--padding_inline);
+}
+
+.formElement > input {
+  padding: 0.5rem 0.1rem;
+  border: none;
+  outline: none;
+  background-color: #f3f3f3;
+  flex-basis: calc(100% - var(--label_width));
+  flex-grow: 1;
+  font-size: 0.9rem;
+}
+
+.formElement:nth-child(1) > input {
+  background-color: transparent;
+  text-align: right;
+}
+
+.formElement:nth-child(4) {
+  position: relative;
+}
+
+.formElement:nth-child(4)::after {
+  position: absolute;
+  content: "Example: gs://your-bucket/your-files/01.csv";
+  top: 100%;
+  right: 0;
+  color: hsl(0, 0%, 60%);
+}
+
+.formElement:nth-child(6) > input {
+  background-color: #cccccc;
+}
+
+.buttonContainer {
+  width: 80%;
+  display: flex;
+  gap: 1rem;
+}
+
+.buttonContainer > button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #6fa8dc;
+  font-size: 0.9rem;
+  padding: var(--padding_block) var(--padding_inline);
+}
+
+.buttonContainer > button:nth-child(1) {
+  flex-grow: 1;
+  flex-basis: var(--submit_button_width);
+}
+
+.buttonContainer > button:nth-child(2) {
+  flex-grow: 1;
+  flex-basis: calc(100% - var(--submit_button_width));
+}
